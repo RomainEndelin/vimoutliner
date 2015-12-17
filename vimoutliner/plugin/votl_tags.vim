@@ -4,7 +4,6 @@
 " Description: This plugin provides inter-outline links for vimoutliner.
 " Maintainer:  Israel Chauca F. <israelchauca@gmail.com>
 " Manual:      The following mappings are added:
-"      					- <C-K> : Follow a link.
 "      					- <C-N> : Jump back in the link-history.
 "      					- <localleader>l : Create a link.
 " ============================================================================
@@ -23,10 +22,6 @@ endif
 
 " Follow inter-outline link.
 noremap <buffer> <Plug>VO_FollowLink :call <SID>follow_link()<CR>
-if !hasmapto('<Plug>VO_FollowLink')
-	"map <unique> <buffer> <C-K> <Plug>VO_FollowLink
-	map <silent> <buffer> <C-K> <Plug>VO_FollowLink
-endif
 
 " Go back to previous outline.
 noremap <buffer> <Plug>VO_JumpBack :call <SID>jump_back()<CR>
